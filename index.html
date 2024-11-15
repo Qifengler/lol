@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呦，又老一岁！！！</title>
+</head>
+<body>
+
+
+    <header>
+        <h2>生日赠礼-LOL随机皮肤*1</h2>
+        <p><span>首先&nbsp;,&nbsp;&nbsp;</span>祝：Micasa , 生日快乐！！🎂</p>
+    </header>
+
+    <main>
+        <p>下面开始抽取皮肤 👇</p>
+
+        <div>
+            <h4>抽取</h4> 
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url(https://game.gtimg.cn/images/lol/act/a20241109arcane2gift/m/bg_02.jpg);
+            background-size: 100% auto;
+        }
+
+        
+
+
+        header h2{
+            font-size: 66px;
+            color: aliceblue;
+            text-shadow: 1px 1px 3px yellow;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        
+
+        header p{
+            font-size: 22px;
+            color: #e7b088;
+            text-align: center;
+        }
+        header p span{
+            color:aliceblue ;
+        }
+
+        main p{
+            color: aliceblue;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        main div{
+           width: 308px;
+           height: 560px;
+           margin: 0 auto;
+           background-color: aliceblue; 
+           position: relative;
+        }
+        main div h4{
+            text-align: center;
+            line-height: 560px;
+            font-size: 66px;
+            color: #999;
+        }
+        main div span{
+            position: absolute;
+            bottom: 0px;
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            font-size: 22px;
+            color: #e7b088;
+            font-weight: 100;
+        }
+        footer{
+            height: 200px;
+            text-align: center;
+            font-size: 18px;
+            color: aliceblue;
+            line-height: 100px;
+            font-weight: 100;
+        }
+
+
+
+        @media (max-width:500px) {
+            header h2{
+            font-size: 26px;
+            line-height:120px;
+            }
+            header p{
+            font-size: 16px;
+            }
+        }
+
+
+
+
+    </style>
+
+
+
+    <script>
+    
+    
+    let skin = [
+        {
+            "name":"古神 魔腾",
+            "url":"https://game.gtimg.cn/images/lol/act/img/skinloading/8b712ac8-132d-45a3-a551-e1dc5561ad15.jpg"
+        },
+        {
+            "name":'太空律动“律动队长”提莫',
+            "url":"https://game.gtimg.cn/images/lol/act/img/skinloading/8656a40e-8d7b-4373-871a-f286ea13fc18.jpg"
+        },
+        {
+            "name":"绝息圣堂 魔腾",
+            "url":"https://game.gtimg.cn/images/lol/act/img/skinloading/60268ce3-d4b2-4eb5-8761-32d187d65524.jpg"
+        },
+        {
+            "name":"神王 盖伦",
+            "url":"https://game.gtimg.cn/images/lol/act/img/skinloading/029573f2-b5eb-4cc4-bf6b-eae7e0e310a9.jpg"
+        },
+        {
+            "name":"女帝 戴安娜",
+            "url":'https://game.gtimg.cn/images/lol/act/img/skinloading/230ebab9-a5c9-4eb9-9027-bc7cdb2ff073.jpg'
+        },
+        {
+            "name":"北极星神 戴安娜",
+            "url":"https://game.gtimg.cn/images/lol/act/img/skinloading/c5939738-eda6-4ae5-a1bd-129b5ffbc54f.jpg"
+        }
+
+    ] ;
+
+    // console.log(skin[Math.floor(Math.random()*5)]);
+    
+
+        let skinBox = document.querySelectorAll('div')[0] ;
+        let btn = document.querySelectorAll('h4')[0] ;
+        let desc = document.querySelectorAll('footer')[0] ;
+    
+        let random = Math.floor(Math.random()*6) ;
+
+        btn.addEventListener('click',function(){
+            skinBox.innerHTML = `
+            <span>${skin[random].name}</span>
+            <img src="${skin[random].url}" alt="">
+        `   
+
+            switch(skin[random].name){
+                case '古神 魔腾' : desc.innerHTML = `
+                上来抽个垃圾，还得是你！！！
+            `;   
+            break ;
+                case '北极星神 戴安娜' : desc.innerHTML = `
+                不是哥们，不要命了吗？ 这么欧！
+            `;
+            break ;
+                case '女帝 戴安娜' : desc.innerHTML = `
+                还行，挺好看，特效差了点。
+            `;
+            break ;
+            case '神王 盖伦' : desc.innerHTML = `
+                那 虽然你不玩儿，但是看着霸气！
+            `;
+            break ;
+            case '绝息圣堂 魔腾' : desc.innerHTML = `
+                这下集齐 三绝息圣堂 了，开黑酷毙了！！！
+            `;
+            break ;
+            case '太空律动“律动队长”提莫' : desc.innerHTML = `
+                去嘲讽吧，看对面怎么集火你。
+            `;
+            break ;
+            default : desc.innerHTML = `
+            恭喜你，抽到了： ${skin[random].name} ！！！
+            `
+            }
+            
+        })
+
+        
+        
+    
+        
+
+
+
+
+    </script>
+</body>
+</html>
